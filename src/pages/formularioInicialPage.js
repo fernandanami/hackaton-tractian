@@ -7,6 +7,7 @@ const FormPage = () => {
   const [inputValue2, setInputValue2] = useState('');
   const [searchTerm, setSearchTerm] = useState('');
   const [filteredOptions, setFilteredOptions] = useState([]);
+  const [severity, setSeverity] = useState(''); // Estado para a gravidade
   const navigate = useNavigate(); // Hook para navegação
 
   // Simulação de dados que poderiam vir do backend
@@ -48,6 +49,10 @@ const FormPage = () => {
     setFilteredOptions([]);
   };
 
+  const handleSeverityChange = (event) => {
+    setSeverity(event.target.value);
+  };
+
   const handleSubmit = async (event) => {
     event.preventDefault(); // Previne o comportamento padrão de envio de formulário
 
@@ -55,6 +60,7 @@ const FormPage = () => {
       nome: inputValue1,
       equipamento: searchTerm,
       falha: inputValue2,
+      gravidade: severity, // Adiciona a gravidade ao formData
     };
 
     // Aqui você faria a requisição ao backend
@@ -118,6 +124,21 @@ const FormPage = () => {
             value={inputValue2}
             onChange={handleInput2Change}
           />
+
+          <div className="mb-4">
+            <label className="block text-black mb-2">Gravidade do Problema</label>
+            <select
+              value={severity}
+              onChange={handleSeverityChange}
+              className="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:border-blue-600 transition duration-200"
+            >
+              <option value="">Selecione a gravidade</option>
+              <option value="Baixa">Baixa</option>
+              <option value="Moderada">Moderada</option>
+              <option value="Grave">Grave</option>
+              <option value="Gravíssima">Gravíssima</option>
+            </select>
+          </div>
 
           <div className="text-center"> {/* Centraliza o botão */}
             <button type="submit" className="bg-black text-white px-6 py-3 rounded hover:bg-blue-700">

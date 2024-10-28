@@ -1,7 +1,7 @@
 import React from 'react';
 
-const ProblemCard = ({ image, title, reportedBy, description }) => (
-  <div className="bg-transparent border border-black rounded-lg p-4 mb-6 flex"> {/* Margem inferior aumentada */}
+const ProblemCard = ({ image, title, reportedBy, description, severity }) => (
+  <div className="bg-transparent border border-black rounded-lg p-4 mb-6 flex">
     <img 
       src={image} 
       alt="Imagem do problema" 
@@ -18,8 +18,25 @@ const ProblemCard = ({ image, title, reportedBy, description }) => (
         <p className="text-gray-600">Reportado por: {reportedBy}</p>
       </div>
       <p className="text-gray-700">{description}</p>
+      <p className={`text-sm font-bold ${getSeverityColor(severity)}`}>Gravidade: {severity}</p>
     </div>
   </div>
 );
+
+// Função para determinar a cor da gravidade
+const getSeverityColor = (severity) => {
+  switch (severity) {
+    case 'Baixa':
+      return 'text-green-600';
+    case 'Moderada':
+      return 'text-yellow-600';
+    case 'Grave':
+      return 'text-orange-600';
+    case 'Gravíssima':
+      return 'text-red-600';
+    default:
+      return '';
+  }
+};
 
 export default ProblemCard;
