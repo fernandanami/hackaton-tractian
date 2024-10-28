@@ -8,43 +8,43 @@ const AttentionPage = () => {
     problems: [
       { 
         id: 1, 
-        title: "Problema 1", 
-        reportedBy: "Smart Trac", 
-        description: "Descrição do problema 1", 
-        image: "/User.png", 
-        severity: "Grave" 
-      },
-      { 
-        id: 2, 
-        title: "Problema 2", 
-        reportedBy: "Carlos", 
-        description: "Descrição do problema 2", 
-        image: "/User.png", 
-        severity: "Baixa" 
-      },
-      { 
-        id: 3, 
-        title: "Problema 3", 
-        reportedBy: "Ana", 
-        description: "Descrição do problema 3", 
-        image: "/User.png", 
+        title: "Esteira transportadora desalinhada", 
+        reportedBy: "Luiz", 
+        description: "A esteira acabou de parar abruptamente. A correia está visivelmente fora da trilha, pressionando contra a lateral dos roletes e emitindo um ruído metálico irregular. Isso fez com que o fluxo de produção fosse interrompido, e algumas caixas começaram a se acumular. Essa falha desgasta a correia, e pode causar danos permanentes.", 
+        image: "/esteira_desalinhada.png", 
         severity: "Moderada" 
       },
       { 
+        id: 2, 
+        title: "Vazamento de óleo na prensa hidráulica", 
+        reportedBy: "Carlos", 
+        description: "O operador relatou que a máquina perdeu pressão durante um ciclo de prensagem, e agora há uma poça de óleo acumulando-se na base da prensa. É possível ver o óleo escorrendo pelas mangueiras e conectores desgastados. A produção foi interrompida imediatamente, e a equipe de segurança isolou a área para evitar acidentes por derrapagem.", 
+        image: "/vazamento_prensa.jpeg", 
+        severity: "Grave" 
+      },
+      { 
+        id: 3, 
+        title: "Bateria deficiente na empilhadeira", 
+        reportedBy: "Ana", 
+        description: "A operadora tentou levantar um pallet pesado, mas a empilhadeira perdeu potência no meio da manobra e agora não consegue nem abaixar nem levantar a carga. As luzes de aviso no painel estão piscando indicando uma bateria crítica, mesmo após a recarga noturna. A produção está parada à espera de uma empilhadeira reserva.", 
+        image: "/bateria_empilhadeira.jpg", 
+        severity: "Baixa" 
+      },
+      { 
         id: 4, 
-        title: "Problema 4", 
+        title: "Desgaste excessivo em rolamento", 
         reportedBy: "Smart Trac", 
-        description: "Descrição do problema 4", 
-        image: "/User.png", 
+        description: "O sensor de vibração identificou um aumento significativo na frequência de vibrações anormais no eixo principal de uma máquina. A análise mostrou picos indicativos de desgaste ou dano severo em um rolamento, podendo causar uma parada repentina do equipamento, além do risco de superaquecimento, que pode iniciar incêncios, e uma potencial sobrecarga no sistema.", 
+        image: "/rolamento_desgaste.jpg", 
         severity: "Gravíssima" 
       },
       { 
         id: 5, 
-        title: "Problema 5", 
-        reportedBy: "Carlos", 
-        description: "Descrição do problema 5", 
-        image: "/User.png", 
-        severity: "Grave" 
+        title: "Desbalanceamento do Motor (Ventilador Industrial)", 
+        reportedBy: "Smart Trac", 
+        description: "Vibrações leves foram identificadas no motor de um ventilador utilizado para ventilação de ar ou exaustão. A origem provável é acúmulo de poeira ou pequenos desalinhamentos nas pás. Esse caso pode gerar um desgaste prematuro de componentes do motor.", 
+        image: "/ventilador_falha.png", 
+        severity: "Baixa" 
       },
     ],
   };
